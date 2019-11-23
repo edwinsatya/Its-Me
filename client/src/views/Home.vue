@@ -5,9 +5,15 @@
       <span id="roll2"></span>
       <span id="roll3"></span>
       <div class="content">
-        <h2><span>Ed</span>win S<span>at</span>ya Yu<span>dis</span>tira</h2>
+        <h2>
+          <span id="sp1">Ed</span>win S<span id="sp2">at</span>ya Yu<span
+            id="sp3"
+            >dis</span
+          >tira
+        </h2>
         <p>
-          a little story about my background and a collection of my portfolio.
+          a little story about my background and some collections of my
+          portfolio.
         </p>
         <a @click="goContent">
           <span></span>
@@ -110,7 +116,6 @@ export default {
   background: rgba(0, 0, 0, 0.8);
 }
 .squere:hover .content a {
-  /* transition-delay: 1s; */
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -139,17 +144,6 @@ export default {
   z-index: 1000;
 }
 .content a {
-  /* transform: translate(0, 30px);
-  transition: 1s;
-  opacity: 0;
-  position: relative;
-  display: inline-block;
-  margin-top: 20px;
-  border: 2px solid white;
-  padding: 6px 18px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600; */
   transform: translate(0, 30px);
   opacity: 0;
   margin-top: 20px;
@@ -222,7 +216,13 @@ a:hover span:nth-child(4) {
   transition: 1s;
   transition-delay: 0.75s;
 }
-.content h2 span {
-  color: #ff002c;
+#sp1 {
+  color: rgba(111, 244, 0, 0.8);
+}
+#sp2 {
+  color: rgba(0, 233, 255, 0.8);
+}
+#sp3 {
+  color: rgba(100, 100, 100, 0.8);
 }
 </style>
