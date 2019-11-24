@@ -6,10 +6,9 @@
       <span id="roll3"></span>
       <div class="content">
         <h2>
-          <span id="sp1">Ed</span>win S<span id="sp2">at</span>ya Yu<span
-            id="sp3"
-            >dis</span
-          >tira
+          <span id="sp1">Ed</span>win S
+          <span id="sp2">at</span>ya Yu
+          <span id="sp3">dis</span>tira
         </h2>
         <p>
           a little story about my background and some collections of my
@@ -34,7 +33,9 @@ export default {
   name: "home",
   methods: {
     goContent() {
-      this.$router.push("/content");
+      setTimeout(() => {
+        this.$router.push("/loading");
+      }, 1000);
     }
   },
   mounted() {
@@ -52,6 +53,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
 .home {
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,11 +63,12 @@ export default {
 }
 .squere {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 .squere #roll1 {
   position: absolute;
@@ -143,18 +146,26 @@ export default {
   transition: 0.5s;
   z-index: 1000;
 }
+.content h2 {
+  font-size: 12px;
+}
+
+.content p {
+  font-size: 9px;
+}
+
 .content a {
   transform: translate(0, 30px);
   opacity: 0;
   margin-top: 20px;
   position: relative;
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 15px;
   color: #2196f3;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 20px;
+  font-size: 9px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -224,5 +235,26 @@ a:hover span:nth-child(4) {
 }
 #sp3 {
   color: rgba(100, 100, 100, 0.8);
+}
+
+/*dekstop vers*/
+@media (min-width: 720px) {
+  .squere {
+    width: 400px;
+    height: 400px;
+  }
+  .content {
+    padding: 40px 60px;
+  }
+  .content a {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+  .content h2 {
+    font-size: 26px;
+  }
+  .content p {
+    font-size: 16px;
+  }
 }
 </style>
